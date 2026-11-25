@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "starmatch"
+dynamic = ["version"]
+description = "Astrometry of star lists against Gaia (pixels -> RA/Dec) and pixel-to-pixel star list matching"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Marek Gorski" },
+    { name = "Dominika Switlik" },
+]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.21"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyter", "matplotlib"]
+gui = ["PyQt5", "matplotlib", "fitsview @ git+https://github.com/astromg/FitsView.git"]
+dev = ["pytest", "ruff", "matplotlib", "nbformat", "nbconvert", "ipykernel", "astropy"]
+wcs = ["astropy"]
+
+[project.scripts]
+starmatch = "starmatch.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/astromg/starmatch"
+
+[tool.setuptools.dynamic]
+version = { attr = "starmatch.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["starmatch*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+extend-exclude = ["examples/gui"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]

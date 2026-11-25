@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""Experimental: find a matching triangle of bright stars in two daophot lists
+and show it in FitsView. FITS file names below are hard-coded.
+
+Usage:  python coofind.py reference.out field.out
+Requires:  pip install "starmatch[gui]"
+"""
 import sys
 import numpy as np
 from fitsview.FitsView_gui import FitsView

@@ -131,3 +131,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# macOS
+.DS_Store
+
+# starmatch outputs (sample data in examples/ is tracked explicitly)
+*.xytr
