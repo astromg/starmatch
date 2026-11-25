@@ -2,7 +2,7 @@
 import sys
 import numpy as np
 from starmatch_lib import *
-from FitsView_gui import *
+from fitsview.FitsView_gui import FitsView
 from PyQt5.QtWidgets import QApplication
 
 import matplotlib.pyplot as plt

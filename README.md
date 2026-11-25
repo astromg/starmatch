@@ -9,6 +9,8 @@ Transformation of 2nd order (translation, rotation, scaling and distortion). Ple
 #### Reguirements:
 python3, numpy 
 
+GUI scripts (`starmatch.py`, `coofind.py`) additionally need [FitsView](https://github.com/astromg/FitsView) (`fitsview` package, PyQt5).
+
 
 ### Run:
 

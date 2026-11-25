@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
 import numpy as np
-from FitsView_gui import *
+from fitsview.FitsView_gui import FitsView
 from PyQt5.QtWidgets import QApplication
 
 file_name_1=sys.argv[1]
